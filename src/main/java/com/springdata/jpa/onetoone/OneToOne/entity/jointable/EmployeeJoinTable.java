@@ -13,6 +13,10 @@ public class EmployeeJoinTable {
     @Column
     private String name;
 
+    
+    //The element 'joinColumns' is used to specify foreign key column of the join table which references the source table (the owner of the association).
+
+//The element 'inverseJoinColumns' is used to specify foreign key column of the join table which references the target table (the inverse side of the association).
     @OneToOne(cascade = CascadeType.ALL)
     @JoinTable(name = "employee_address_relation",
     joinColumns = {@JoinColumn(name = "user_id",referencedColumnName = "id")},
