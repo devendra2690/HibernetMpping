@@ -34,6 +34,9 @@ public class AddressSharedKey {
     // make sure you do not have getter for EmployeeSharedKey object
     // it will throw error if you try to return same object as it is
     // you need tranasformer of you keep getter for EmployeeSharedKey
+    // @MapsId in hibernate annotation maps a column with another table's column. It can be used also to share the same primary key between 2 tables.
+    //MapsId lets you use the same primary key between two different entities/tables. Note: when you use MapsId, the CASCADE.ALL flag becomes useless, 
+    //and you will need to make sure that your entities are saved manually.
     private EmployeeSharedKey employee;
 
     public String getAddress1() {
